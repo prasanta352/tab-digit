@@ -59,6 +59,11 @@ public final class TabAnimationUp extends AbstractTabAnimation {
     }
 
     @Override
+    public void rotate(int mAlpha) {
+        mMiddleTab.rotate(mAlpha);
+    }
+
+    @Override
     protected void makeSureCycleIsClosed() {
         if (mTime == -1) {
             return;

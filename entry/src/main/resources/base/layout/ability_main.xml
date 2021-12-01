@@ -7,19 +7,41 @@
     ohos:orientation="vertical">
 
     <com.xenione.digit.TabDigit
+        ohos:id="$+id:charView1"
         ohos:height="match_content"
         ohos:width="match_content"
-        ohos:id="$+id:charView1"
         />
 
-    <!--        android:id="@+id/charView1"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:layout_weight="1"-->
-<!--        custom:backgroundColor="#000000"-->
-<!--        custom:padding="10dp"-->
-<!--        custom:textColor="#ffffff"-->
-<!--        custom:textSize="60dp" />-->
+    <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:alignment="center"
+        ohos:orientation="horizontal"
+        >
+
+        <Button
+            ohos:id="$+id:decrement"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text="-"
+            ohos:text_size="26fp"/>
+
+        <Text
+            ohos:id="$+id:value"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text="0"
+            ohos:text_size="26fp"
+            ohos:left_margin="6vp"
+            ohos:right_margin="6vp"
+            />
+
+        <Button
+            ohos:id="$+id:increment"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text="+"
+            ohos:text_size="26fp"/>
+    </DirectionalLayout>
 
 </DirectionalLayout>

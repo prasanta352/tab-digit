@@ -14,6 +14,9 @@ public abstract class AbstractTabAnimation {
 
     public abstract void run();
 
+    public abstract void rotate(int mAlpha);
+
+
     protected abstract void makeSureCycleIsClosed();
 
     protected final TabDigit.Tab mTopTab;

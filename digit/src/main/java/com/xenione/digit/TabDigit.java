@@ -407,6 +407,11 @@ public class TabDigit extends Component implements Runnable, Component.DrawTask,
         eventHandler.postTask(this, 100);
 
     }
+
+    public void rotate(int mAlpha){
+        tabAnimation.rotate(mAlpha);
+    }
+
     //#endregion listeners
 
     /**
