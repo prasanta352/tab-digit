@@ -60,8 +60,10 @@ public class MatrixHelper {
         try {
             synchronized (canvas) {
                 canvas.save();
+                MatrixPrecomputed.getMatrix(matrix,alpha);
+//                canvas.rotate(alpha);
                 threeDimView.rotateX(alpha);
-                threeDimView.applyToCanvas(canvas);
+//                threeDimView.applyToCanvas(canvas);
                 canvas.getMatrix(matrix);
                 canvas.restore();
             }
@@ -102,12 +104,11 @@ public class MatrixHelper {
         synchronized (canvas) {
             canvas.save();
             canvas.translate(dx, dy);
-            threeDimView.rotateZ(dz);
-
-            Matrix matrix1 =new Matrix();
-            threeDimView.getMatrix(matrix1);
+            //            threeDimView.rotateZ(dz);
+//            Matrix matrix1 =new Matrix();
+//            threeDimView.getMatrix(matrix1);
+//            matrix1.postConcat(matrix);
             canvas.getMatrix(matrix);
-            matrix1.postConcat(matrix);
 
             canvas.restore();
         }
