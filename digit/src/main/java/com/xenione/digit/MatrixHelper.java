@@ -60,18 +60,13 @@ public class MatrixHelper {
         try {
             synchronized (canvas) {
                 canvas.save();
-                MatrixPrecomputed.getMatrix(matrix,alpha);
-//                canvas.rotate(alpha);
-                threeDimView.rotateX(alpha);
-//                threeDimView.applyToCanvas(canvas);
-                canvas.getMatrix(matrix);
+                MatrixPrecomputed.getMatrix(matrix, alpha);
                 canvas.restore();
             }
         } catch (Exception ex) {
             HiLog.warn(LABEL_LOG, "MainAbilitySlice: ex " + ex);
             for (StackTraceElement st : ex.getStackTrace()) {
                 HiLog.warn(LABEL_LOG, "" + st);
-
             }
         }
     }
@@ -104,12 +99,11 @@ public class MatrixHelper {
         synchronized (canvas) {
             canvas.save();
             canvas.translate(dx, dy);
-            //            threeDimView.rotateZ(dz);
-//            Matrix matrix1 =new Matrix();
-//            threeDimView.getMatrix(matrix1);
-//            matrix1.postConcat(matrix);
+            threeDimView.rotateZ(dz);
+            Matrix matrix1 =new Matrix();
+            threeDimView.getMatrix(matrix1);
+            matrix1.postConcat(matrix);
             canvas.getMatrix(matrix);
-
             canvas.restore();
         }
     }
